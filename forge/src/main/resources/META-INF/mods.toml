@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[45,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "spritearrows"
+version = "${version}"
+displayName = "Sprite Arrows"
+authors = "agnor99"
+description = '''
+Render arrows as their item model. Did you know that tridents are arrows?
+'''
+logoFile = "assets/spritearrows/icon.png"
+
+[[dependencies.spritearrows]]
+modId = "forge"
+mandatory = true
+versionRange = "[45,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.spritearrows]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.4,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.spritearrows]]
+modId = "architectury"
+mandatory = true
+versionRange = "[8.1.79,)"
+ordering = "AFTER"
+side = "CLIENT"

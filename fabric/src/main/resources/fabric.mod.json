@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "spritearrows",
+  "version": "${version}",
+  "name": "Sprite Arrows",
+  "description": "Render arrows as their item model. Did you know that tridents are arrows?",
+  "authors": [
+    "agnor99"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/spritearrows/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.agnor.spritearrows.fabric.SpriteArrowsFabricEntryPoint"
+    ]
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.4",
+    "architectury": ">=8.1.79"
+  }
+}

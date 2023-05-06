@@ -1,0 +1,6 @@
+accessWidener   v2  named
+accessible field net/minecraft/client/renderer/entity/EntityRenderers PROVIDERS Ljava/util/Map;
+accessible method net/minecraft/world/entity/projectile/AbstractArrow getPickupItem ()Lnet/minecraft/world/item/ItemStack;
+accessible method net/minecraft/world/entity/projectile/Arrow getPickupItem ()Lnet/minecraft/world/item/ItemStack;
+accessible method net/minecraft/world/entity/projectile/SpectralArrow getPickupItem ()Lnet/minecraft/world/item/ItemStack;
+accessible method net/minecraft/world/entity/projectile/ThrownTrident getPickupItem ()Lnet/minecraft/world/item/ItemStack;
