@@ -16,12 +16,11 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "dev.agnor.spritearrows.fabric.SpriteArrowsFabricEntryPoint"
+      "dev.agnor.spritearrows.fabric.SpriteArrowsFabricEntrypoint"
     ]
   },
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19.4",
-    "architectury": ">=8.1.79"
+    "minecraft": ">=1.19.4"
   }
 }

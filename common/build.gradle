@@ -5,7 +5,6 @@ architectury {
 loom {
     accessWidenerPath = file("src/main/resources/spritearrows.accesswidener")
 }
-
 dependencies {
     // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
     // Do NOT use other classes from fabric loader
@@ -17,7 +16,7 @@ dependencies {
 publishing {
     publications {
         mavenCommon(MavenPublication) {
-            artifactId = rootProject.archives_base_name
+            artifactId = rootProject.archives_base_name + loom.platform
             from components.java
         }
     }

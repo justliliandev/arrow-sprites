@@ -67,10 +67,11 @@ components.java {
     }
 }
 
+archivesBaseName = archives_base_name + "-fabric"
 publishing {
     publications {
         mavenFabric(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
+            artifactId = rootProject.archives_base_name + "-" + loom.platform + "-" + project.name
             from components.java
         }
     }

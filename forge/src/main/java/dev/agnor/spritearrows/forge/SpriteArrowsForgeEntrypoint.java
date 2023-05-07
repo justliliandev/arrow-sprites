@@ -1,8 +1,10 @@
 package dev.agnor.spritearrows.forge;
 
 import dev.agnor.spritearrows.SpriteArrowsCommonEntrypoint;
-import dev.architectury.platform.forge.EventBuses;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 
@@ -10,9 +12,16 @@ import net.minecraftforge.fml.loading.FMLEnvironment;
 public class SpriteArrowsForgeEntrypoint {
     public SpriteArrowsForgeEntrypoint() {
 
-        EventBuses.registerModEventBus(SpriteArrowsCommonEntrypoint.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         if (FMLEnvironment.dist.isClient()) {
-            SpriteArrowsCommonEntrypoint.init();
+            modEventBus.addListener(EventPriority.LOWEST, ClassLoadingProtection::listen);
+        }
+    }
+
+    private static class ClassLoadingProtection {
+
+        private static void listen(FMLClientSetupEvent event) {
+            SpriteArrowsCommonEntrypoint.replace();
         }
     }
 }

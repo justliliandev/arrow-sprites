@@ -26,10 +26,3 @@ mandatory = true
 versionRange = "[1.19.4,)"
 ordering = "NONE"
 side = "CLIENT"
-
-[[dependencies.spritearrows]]
-modId = "architectury"
-mandatory = true
-versionRange = "[8.1.79,)"
-ordering = "AFTER"
-side = "CLIENT"

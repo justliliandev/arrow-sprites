@@ -7,6 +7,6 @@ public class SpriteArrowsFabricEntrypoint implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        SpriteArrowsCommonEntrypoint.init();
+        SpriteArrowsCommonEntrypoint.replace();
     }
 }
