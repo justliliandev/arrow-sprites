@@ -1,23 +1,19 @@
 package dev.agnor.spritearrows;
 
 
-import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.entity.ArrowRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SpriteArrowsCommonEntrypoint {
     public static final String MOD_ID = "spritearrows";
-    public static final Logger LOGGER = LogUtils.getLogger();
 
     public static void replace() {
         Minecraft instance = Minecraft.getInstance();
@@ -32,7 +28,6 @@ public class SpriteArrowsCommonEntrypoint {
             }
         }
         for (EntityType type: replaceable) {
-            SpriteArrowsCommonEntrypoint.LOGGER.warn("at replace: " + BuiltInRegistries.ENTITY_TYPE.getKey(type));
             EntityRenderers.PROVIDERS.put(type, provide());
         }
     }

@@ -8,8 +8,6 @@
     "agnor99"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
   "license": "MIT",
   "icon": "assets/spritearrows/icon.png",
@@ -21,6 +19,6 @@
   },
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19.4"
+    "minecraft": "=1.19.2"
   }
 }
