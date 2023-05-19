@@ -21,7 +21,7 @@ public class SpriteArrowsForgeEntrypoint {
     private static class ClassLoadingProtection {
 
         private static void listen(FMLClientSetupEvent event) {
-            SpriteArrowsCommonEntrypoint.replace();
+            event.enqueueWork(SpriteArrowsCommonEntrypoint::replace);
         }
     }
 }
