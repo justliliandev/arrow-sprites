@@ -18,7 +18,7 @@ public class SpriteArrowsCommonEntrypoint {
     public static void replace() {
         Minecraft instance = Minecraft.getInstance();
         List<EntityType<?>> replaceable = new ArrayList<>();
-        EntityRendererProvider.Context ctx = new EntityRendererProvider.Context(instance.getEntityRenderDispatcher(), instance.getItemRenderer(), instance.getBlockRenderer(), null, instance.getResourceManager(), new EntityModelSet(), instance.font);
+        EntityRendererProvider.Context ctx = new EntityRendererProvider.Context(instance.getEntityRenderDispatcher(), instance.getItemRenderer(), instance.getResourceManager(), new EntityModelSet(), instance.font);
         for (var entry : EntityRenderers.PROVIDERS.entrySet()) {
             try {
                 if (entry.getKey() == EntityType.TRIDENT || entry.getValue().create(ctx) instanceof ArrowRenderer<?>) {
