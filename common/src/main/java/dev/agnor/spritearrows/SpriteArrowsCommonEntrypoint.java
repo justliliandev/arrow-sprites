@@ -24,7 +24,7 @@ public class SpriteArrowsCommonEntrypoint {
                 if (entry.getKey() == EntityType.TRIDENT || entry.getValue().create(ctx) instanceof ArrowRenderer<?>) {
                     replaceable.add(entry.getKey());
                 }
-            } catch (Exception ignored) {
+            } catch (Exception | NoClassDefFoundError ignored) {
             }
         }
         for (EntityType type: replaceable) {
