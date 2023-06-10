@@ -33,9 +33,7 @@ configurations {
 
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
-    // Remove the next line if you don't want to depend on the API
-    modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
-    modImplementation "curse.maven:xtraarrows-566441:4441421"
+    //modImplementation "curse.maven:xtraarrows-566441:4441421"
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 }
@@ -78,7 +76,7 @@ components.java {
     }
 }
 
-archivesBaseName = archives_base_name + "-forge"
+archivesBaseName = archives_base_name + "-forge-${rootProject.minecraft_version}"
 publishing {
     publications {
         mavenForge(MavenPublication) {

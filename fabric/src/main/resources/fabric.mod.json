@@ -8,8 +8,8 @@
     "agnor99"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/agnor99/arrow-sprites/issues",
+    "issues": "https://github.com/agnor99/arrow-sprites/issues"
   },
   "license": "MIT",
   "icon": "assets/spritearrows/icon.png",
@@ -21,6 +21,6 @@
   },
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19.4"
+    "minecraft": ">=1.20"
   }
 }

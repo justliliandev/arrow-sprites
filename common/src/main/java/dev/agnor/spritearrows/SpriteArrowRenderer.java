@@ -42,7 +42,7 @@ public class SpriteArrowRenderer extends EntityRenderer<AbstractArrow> {
                 pickupItem.getOrCreateTag().putInt("CustomPotionColor", color);
             }
         }
-        renderer.renderStatic(pickupItem, ItemDisplayContext.GROUND, pPackedLight, OverlayTexture.NO_OVERLAY, poseStack, buffer, abstractArrow.getLevel(), abstractArrow.getId());
+        renderer.renderStatic(pickupItem, ItemDisplayContext.GROUND, pPackedLight, OverlayTexture.NO_OVERLAY, poseStack, buffer, abstractArrow.level(), abstractArrow.getId());
         poseStack.popPose();
         super.render(abstractArrow, pEntityYaw, pPartialTicks, poseStack, buffer, pPackedLight);
     }
